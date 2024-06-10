@@ -50,7 +50,7 @@ jobs:
       id: create_release
       uses: actions/create-release@v1
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITH_ACCESS_KEY }}
       with:
         tag_name: ${{ steps.next_version.outputs.tag }}
         release_name: Release ${{ steps.next_version.outputs.tag }}
