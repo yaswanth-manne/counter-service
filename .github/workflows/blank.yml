@@ -27,16 +27,15 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITH_ACCESS_KEY }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      with:
+        args: >
+          -Dsonar.projectKey=yaswanth-manne_counter-service
+          -Dsonar.organization=yaswanth-manne
 
     - name: Setup Git
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
-      with:
-        args: >
-          -Dsonar.projectKey=counter-service
-          -Dsonar.organization=yaswanth-manne
-          -Dsonar.host.url=https://sonarcloud.io
 
 ################################################################
 ###               DETERMINE NEXT VERSION                     ###
