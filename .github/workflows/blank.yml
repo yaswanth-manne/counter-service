@@ -32,6 +32,11 @@ jobs:
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
+      with:
+        args: >
+          -Dsonar.projectKey=counter-service
+          -Dsonar.organization=yaswanth-manne
+          -Dsonar.host.url=https://sonarcloud.io
 
 ################################################################
 ###               DETERMINE NEXT VERSION                     ###
