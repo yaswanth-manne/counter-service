@@ -2,7 +2,7 @@ from flask import Flask,jsonify,request
 import os
 
 app = Flask(__name__)
-COUNTER_FILE = "data/counter.txt"
+COUNTER_FILE = "/data/counter.txt"
 
 def read_counter():
     if os.path.exists(COUNTER_FILE):
